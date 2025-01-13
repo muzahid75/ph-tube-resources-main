@@ -1,0 +1,25 @@
+<button id="showModalData" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modal-content">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+
+    const detailsContainer = document.getElementById("modal-content");
+    detailsContainer.innerHTML =`
+    <img src=${vedio.thumbnail}>
+    <p>${vedio.description}`
+
+    // way -1
+    // document.getElementById("showModalData").click();
+    // way -2
+    document.getElementById("customModal").showModal();
